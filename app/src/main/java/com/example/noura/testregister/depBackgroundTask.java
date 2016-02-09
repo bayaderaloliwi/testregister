@@ -70,7 +70,6 @@ public class depBackgroundTask extends AsyncTask<String,Void,String> {
                 e.printStackTrace();
             }
 
-
         }
         return null;
     }
