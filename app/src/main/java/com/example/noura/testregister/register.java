@@ -70,23 +70,24 @@ public  void userReg(View view){
         r_FullName.setError( "Name is required!" );}
     if( r_Password.getText().toString().length() == 0 ){
         r_Password.setError( "Password is required!" );}
-    if( !pass.equals(repass )){
-        r_repassword.setError( "Password dose not match" );}
     if( r_email.getText().toString().length() == 0 ){
         r_email.setError( "Email is required!" );}
     if( r_reemail.getText().toString().length() == 0 ){
-        r_reemail.setError( "Re Enter your Password" );}
+        r_reemail.setError( "Re Enter your email" );}
     if( r_address.getText().toString().length() == 0 ){
         r_address.setError("Address is required!");}
     if (!r_policy.isChecked()){
         r_policy.setError("you must agree to policy");}
 
     else {
+        if( !pass.equals(repass )){
+            r_repassword.setError( "Password dose not match" );}
+        else {
     String method = "register";
     BackgroundTask backgroundTask = new BackgroundTask(this);
     backgroundTask.execute(method, id, name, pass, email,address);
     Intent i = new Intent(getApplicationContext(),login.class);
-    startActivity(i);}
+    startActivity(i);}}
 }
 
 }

@@ -205,9 +205,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/radioGroup"
         android:orientation="horizontal"
-        android:layout_alignTop="@+id/relationtx"
-        android:layout_toRightOf="@+id/relationtx"
-        android:layout_toEndOf="@+id/relationtx">
+        android:layout_below="@+id/relationtx"
+        >
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -228,6 +227,26 @@
             android:layout_toRightOf="@+id/r_parent"
             android:layout_toEndOf="@+id/r_parent" />
 
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Child"
+            android:id="@+id/r_child"
+            android:checked="false"
+            android:layout_alignTop="@+id/radioGroup"
+            android:layout_toRightOf="@+id/radioGroup"
+            android:layout_toEndOf="@+id/radioGroup" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:id="@+id/r_other"
+            android:checked="false"
+            android:layout_above="@+id/rid"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
     </RadioGroup>
 
     <TextView
@@ -236,7 +255,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Resident ID:"
         android:id="@+id/rid"
-        android:layout_below="@+id/r_child"
+        android:layout_below="@+id/radioGroup"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="18dp" />
@@ -291,25 +310,6 @@
         android:layout_alignTop="@+id/popup_pol"
         android:layout_alignRight="@+id/ID"
         android:layout_alignEnd="@+id/ID" />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Child"
-        android:id="@+id/r_child"
-        android:checked="false"
-        android:layout_below="@+id/relationtx"
-        android:layout_toRightOf="@+id/relationtx"
-        android:layout_toEndOf="@+id/relationtx" />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Other"
-        android:id="@+id/r_other"
-        android:checked="false"
-        android:layout_below="@+id/relationtx"
-        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
 
