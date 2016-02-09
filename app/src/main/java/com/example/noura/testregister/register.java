@@ -70,10 +70,8 @@ public  void userReg(View view){
         r_FullName.setError( "Name is required!" );}
     if( r_Password.getText().toString().length() == 0 ){
         r_Password.setError( "Password is required!" );}
-    if( r_repassword.getText().toString().length() == 0 ){
-        r_repassword.setError( "Re Enter your Password" );}
-    if( !r_Password.equals(r_repassword)){
-        r_repassword.setError( "please make sure password matches" );}
+    if( !pass.equals(repass )){
+        r_repassword.setError( "Password dose not match" );}
     if( r_email.getText().toString().length() == 0 ){
         r_email.setError( "Email is required!" );}
     if( r_reemail.getText().toString().length() == 0 ){
