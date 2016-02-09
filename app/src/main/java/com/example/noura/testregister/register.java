@@ -50,11 +50,27 @@ public  void userReg(View view){
     email = r_email.getText().toString();
     remail = r_reemail.getText().toString();
      address= r_address.getText().toString();
+    if( r_ID.getText().toString().length() == 0 ){
+        r_ID.setError( " ID is required!" );}
+    if( r_FullName.getText().toString().length() == 0 ){
+        r_FullName.setError( "Name is required!" );}
+    if( r_Password.getText().toString().length() == 0 ){
+        r_Password.setError( "Password is required!" );}
+    if( r_repassword.getText().toString().length() == 0 ){
+        r_repassword.setError( "Re Enter your Password" );}
+    if( r_email.getText().toString().length() == 0 ){
+        r_email.setError( "Email is required!" );}
+    if( r_reemail.getText().toString().length() == 0 ){
+        r_reemail.setError( "Re Enter your Password" );}
+    if( r_address.getText().toString().length() == 0 ){
+        r_address.setError( "Address is required!" );}
+
+    else {
     String method = "register";
     BackgroundTask backgroundTask = new BackgroundTask(this);
     backgroundTask.execute(method, id, name, pass, email,address);
     Intent i = new Intent(getApplicationContext(),login.class);
-    startActivity(i);
+    startActivity(i);}
 }
 
 }
