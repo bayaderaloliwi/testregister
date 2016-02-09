@@ -1,5 +1,6 @@
 package com.example.noura.testregister;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
@@ -29,8 +30,7 @@ public class register extends AppCompatActivity{
 
         r_ID = (EditText) findViewById(R.id.ID);
         r_FullName = (EditText) findViewById(R.id.FullName);
-        if( r_FullName.getText().toString().length() == 0 )
-            r_FullName.setError( "First name is required!" );
+
         r_Password = (EditText) findViewById(R.id.Password);
         r_repassword = (EditText) findViewById(R.id.repassword);
         r_email = (EditText) findViewById(R.id.email);
@@ -53,7 +53,8 @@ public  void userReg(View view){
     String method = "register";
     BackgroundTask backgroundTask = new BackgroundTask(this);
     backgroundTask.execute(method, id, name, pass, email,address);
-    finish();
+    Intent i = new Intent(getApplicationContext(),login.class);
+    startActivity(i);
 }
 
 }
