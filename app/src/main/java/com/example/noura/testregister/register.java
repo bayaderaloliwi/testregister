@@ -89,5 +89,4 @@ public  void userReg(View view){
     Intent i = new Intent(getApplicationContext(),login.class);
     startActivity(i);}}
 }
-
 }

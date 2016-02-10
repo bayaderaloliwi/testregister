@@ -18,7 +18,7 @@ import android.widget.Toast;
 public class depregister extends AppCompatActivity {
     Button r_submit;
     EditText r_ID, r_FullName, r_Password, r_repassword, r_email, r_reemail , r_address, RID;
-    String id, name, pass, repass, email, remail, address, r_id;
+    String id, name, pass, repass, email, remail, address,r_RG, r_id;
     CheckBox r_policy;
     TextView popup_pol;
     RadioButton r_parent, r_spouse, r_child, r_other;
@@ -30,6 +30,8 @@ public class depregister extends AppCompatActivity {
         setContentView(R.layout.activity_depregister);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         r_ID = (EditText) findViewById(R.id.ID);
         r_FullName = (EditText) findViewById(R.id.FullName);
@@ -61,6 +63,16 @@ public class depregister extends AppCompatActivity {
         email = r_email.getText().toString();
         remail = r_reemail.getText().toString();
         address= r_address.getText().toString();
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // TODO Auto-generated method stub
+                RadioButton radioGroup = (RadioButton) findViewById(checkedId);
+                r_RG = radioGroup.getText().toString();
+            }
+        });
+
         r_id= RID.getText().toString();
 
         if( r_ID.getText().toString().length() == 0 ){
@@ -88,8 +100,9 @@ public class depregister extends AppCompatActivity {
             else {
                 String method = "depregister";
                 depBackgroundTask depbackgroundTask = new depBackgroundTask(this);
-                depbackgroundTask.execute(method, id, name, pass, email,address,r_id);
+                depbackgroundTask.execute(method, id, name, pass, email,address,r_RG, r_id);
                 Intent i = new Intent(getApplicationContext(),login.class);
                 startActivity(i);}}
     }
+
 }

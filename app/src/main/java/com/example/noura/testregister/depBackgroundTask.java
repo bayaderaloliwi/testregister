@@ -38,11 +38,13 @@ public class depBackgroundTask extends AsyncTask<String,Void,String> {
         if(method.equals("depregister"))
         {
             String id = params[1];
-            String name = params[2];
-            String password = params[3];
-            String email = params[4];
-            String address = params[5];
-            String r_id= params[7];
+            String r_id= params[2];
+            String name = params[3];
+            String password = params[4];
+            String email = params[5];
+            String address = params[6];
+            String r_RG = params[7];
+
 
             try {
                 URL url = new URL(req_url);
@@ -52,10 +54,12 @@ public class depBackgroundTask extends AsyncTask<String,Void,String> {
                 OutputStream OS= httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS,"UTF-8"));
                 String data = URLEncoder.encode("ID", "UTF-8") +"=" + URLEncoder.encode(id, "UTF-8")+ "&" +
+                        URLEncoder.encode("RID", "UTF-8") +"=" + URLEncoder.encode(r_id, "UTF-8")+ "&" +
                         URLEncoder.encode("name", "UTF-8") +"=" + URLEncoder.encode(name, "UTF-8")+ "&" +
                         URLEncoder.encode("password", "UTF-8") +"=" + URLEncoder.encode(password, "UTF-8")+ "&" +
                         URLEncoder.encode("email", "UTF-8") +"=" + URLEncoder.encode(email, "UTF-8")+ "&" +
-                        URLEncoder.encode("address", "UTF-8") +"=" + URLEncoder.encode(address, "UTF-8");
+                        URLEncoder.encode("address", "UTF-8") +"=" + URLEncoder.encode(address, "UTF-8")+
+                        URLEncoder.encode("r_RG", "UTF-8") +"=" + URLEncoder.encode(r_RG, "UTF-8");
 
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
@@ -69,6 +73,7 @@ public class depBackgroundTask extends AsyncTask<String,Void,String> {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
 
         }
         return null;
