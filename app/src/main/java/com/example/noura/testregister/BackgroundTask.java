@@ -57,6 +57,7 @@ public class BackgroundTask extends AsyncTask<String, Void,String> {
                         URLEncoder.encode("email", "UTF-8") +"=" + URLEncoder.encode(email, "UTF-8")+ "&" +
                         URLEncoder.encode("address", "UTF-8") +"=" + URLEncoder.encode(address, "UTF-8");
 
+
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();

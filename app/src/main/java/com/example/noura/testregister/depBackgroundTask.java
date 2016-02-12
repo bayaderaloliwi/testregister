@@ -37,6 +37,7 @@ public class depBackgroundTask extends AsyncTask<String,Void,String> {
         String method = params[0];
         if(method.equals("depregister"))
         {
+
             String id = params[1];
             String r_id= params[2];
             String name = params[3];
