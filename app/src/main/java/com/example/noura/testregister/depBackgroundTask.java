@@ -43,7 +43,7 @@ public class depBackgroundTask extends AsyncTask<String,Void,String> {
             String password = params[4];
             String email = params[5];
             String address = params[6];
-            String r_RG = params[7];
+            String relation = params[7];
 
 
             try {
@@ -59,7 +59,7 @@ public class depBackgroundTask extends AsyncTask<String,Void,String> {
                         URLEncoder.encode("password", "UTF-8") +"=" + URLEncoder.encode(password, "UTF-8")+ "&" +
                         URLEncoder.encode("email", "UTF-8") +"=" + URLEncoder.encode(email, "UTF-8")+ "&" +
                         URLEncoder.encode("address", "UTF-8") +"=" + URLEncoder.encode(address, "UTF-8")+
-                        URLEncoder.encode("r_RG", "UTF-8") +"=" + URLEncoder.encode(r_RG, "UTF-8");
+                        URLEncoder.encode("r_RG", "UTF-8") +"=" + URLEncoder.encode(relation, "UTF-8");
 
                 bufferedWriter.write(data);
                 bufferedWriter.flush();

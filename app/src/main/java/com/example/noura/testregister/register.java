@@ -64,7 +64,7 @@ public  void userReg(View view){
     email = r_email.getText().toString();
     remail = r_reemail.getText().toString();
      address= r_address.getText().toString();
-    if( r_ID.getText().toString().length() == 0 ){
+  /**  if( r_ID.getText().toString().length() == 0 ){
         r_ID.setError( " ID is required!" );}
     if( r_FullName.getText().toString().length() == 0 ){
         r_FullName.setError( "Name is required!" );}
@@ -77,9 +77,9 @@ public  void userReg(View view){
     if( r_address.getText().toString().length() == 0 ){
         r_address.setError("Address is required!");}
     if (!r_policy.isChecked()){
-        r_policy.setError("you must agree to policy");}
+        r_policy.setError("you must agree to policy");}*/
 
-    else {
+   // else {
         if( !pass.equals(repass )){
             r_repassword.setError( "Password dose not match" );}
         else {
@@ -87,6 +87,6 @@ public  void userReg(View view){
     BackgroundTask backgroundTask = new BackgroundTask(this);
     backgroundTask.execute(method, id, name, pass, email,address);
     Intent i = new Intent(getApplicationContext(),login.class);
-    startActivity(i);}}
+    startActivity(i);}//}
 }
 }
