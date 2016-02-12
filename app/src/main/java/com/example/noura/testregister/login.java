@@ -20,7 +20,7 @@ public class
 
     }
 
-
+//test
     public  void resReg(View view){
         Intent i = new Intent(getApplicationContext(),register.class);
         startActivity(i);}
