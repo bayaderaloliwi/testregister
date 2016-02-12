@@ -60,7 +60,7 @@ public class depBackgroundTask extends AsyncTask<String,Void,String> {
                         URLEncoder.encode("password", "UTF-8") +"=" + URLEncoder.encode(password, "UTF-8")+ "&" +
                         URLEncoder.encode("email", "UTF-8") +"=" + URLEncoder.encode(email, "UTF-8")+ "&" +
                         URLEncoder.encode("address", "UTF-8") +"=" + URLEncoder.encode(address, "UTF-8")+
-                        URLEncoder.encode("r_RG", "UTF-8") +"=" + URLEncoder.encode(relation, "UTF-8");
+                        URLEncoder.encode("relation", "UTF-8") +"=" + URLEncoder.encode(relation, "UTF-8");
 
                 bufferedWriter.write(data);
                 bufferedWriter.flush();

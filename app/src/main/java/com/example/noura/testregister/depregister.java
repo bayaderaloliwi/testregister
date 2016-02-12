@@ -33,7 +33,6 @@ public class depregister extends AppCompatActivity {
 
         r_ID = (EditText) findViewById(R.id.ID);
         r_FullName = (EditText) findViewById(R.id.FullName);
-
         r_Password = (EditText) findViewById(R.id.Password);
         r_repassword = (EditText) findViewById(R.id.repassword);
         r_email = (EditText) findViewById(R.id.email);
