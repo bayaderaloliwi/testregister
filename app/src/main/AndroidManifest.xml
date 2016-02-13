@@ -21,17 +21,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".login"
-            android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".depregister"
             android:label="@string/title_activity_depregister"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".policy"
             android:label="@string/title_activity_policy"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -4,4 +4,5 @@
     <string name="title_activity_login">login</string>
     <string name="title_activity_depregister">depregister</string>
     <string name="title_activity_policy">policy</string>
+    <string name="title_activity_invited_logs">invited_logs</string>
 </resources>

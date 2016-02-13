@@ -35,7 +35,6 @@ public class register extends AppCompatActivity{
 
         r_ID = (EditText) findViewById(R.id.ID);
         r_FullName = (EditText) findViewById(R.id.FullName);
-
         r_Password = (EditText) findViewById(R.id.Password);
         r_repassword = (EditText) findViewById(R.id.repassword);
         r_email = (EditText) findViewById(R.id.email);
@@ -62,7 +61,7 @@ public  void userReg(View view){
     repass= r_repassword.getText().toString();
     email = r_email.getText().toString();
     remail = r_reemail.getText().toString();
-     address= r_address.getText().toString();
+    address= r_address.getText().toString();
   /**  if( r_ID.getText().toString().length() == 0 ){
         r_ID.setError( " ID is required!" );}
     if( r_FullName.getText().toString().length() == 0 ){
