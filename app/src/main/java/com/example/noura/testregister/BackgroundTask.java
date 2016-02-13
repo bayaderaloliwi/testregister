@@ -33,7 +33,7 @@ public class BackgroundTask extends AsyncTask<String, Void,String> {
     @Override
     protected String doInBackground(String... params) {
         String req_url = "http://10.0.2.2/webapp/register.php";
-        /**login*/
+        /**com.example.noura.testregister.policy.login*/
         String method = params[0];
         if(method.equals("register"))
         {

@@ -27,5 +27,5 @@ public class
     public  void depReg(View view){
         Intent i = new Intent(getApplicationContext(),depregister.class);
         startActivity(i);}
-
+//
 }
